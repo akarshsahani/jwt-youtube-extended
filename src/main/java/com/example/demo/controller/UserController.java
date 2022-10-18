@@ -46,7 +46,7 @@ public class UserController {
 		jwtRequest.setUserPassword(user.getUserPassword());
 		jwtRequest.setUserName(user.getUserName());
 		
-		User userDetails =  userService.registerNewUser(user);
+//		User userDetails =  userService.registerNewUser(user);
 		return jwtService.createJwtToken(jwtRequest);
 	}
 	

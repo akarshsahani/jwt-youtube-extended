@@ -1,11 +1,9 @@
 package com.example.demo.Util;
 
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
@@ -74,7 +72,7 @@ public class JwtUtil {
 //		claims.put("Role", userDetails.getAuthorities());
 		return Jwts.builder()
 				.setClaims(claims)
-				.setSubject(sub)
+				.setSubject(sub2)
 				.setIssuedAt(new Date(System.currentTimeMillis()))
 				.setExpiration(new Date(System.currentTimeMillis() + TOKEN_VALIDITY * 1000))
 				.signWith(SignatureAlgorithm.HS512, SECRET_KEY)
